@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merriweather&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic tac toe</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Tit tac toe</h1>
+        </header>
+        <main>
+            <div class="modal modal__start">
+                <h2 class="modal__header">Let's play!</h2>
+                <button class="button">Start</button>
+            </div>
+            <div class="field">
+                <div class="cell-wrapper">
+                    <div class="cell"></div>
+                </div>
+                <div class="cell-wrapper">
+                    <div class="cell"></div>
+                </div>
+                <div class="cell-wrapper">
+                    <div class="cell"></div>
+                </div>
+                <div class="cell-wrapper">
+                    <div class="cell"></div>
+                </div>
+                <div class="cell-wrapper">
+                    <div class="cell"></div>
+                </div>
+                <div class="cell-wrapper">
+                    <div class="cell"></div>
+                </div>
+                <div class="cell-wrapper">
+                    <div class="cell"></div>
+                </div>
+                <div class="cell-wrapper">
+                    <div class="cell"></div>
+                </div>
+                <div class="cell-wrapper">
+                    <div class="cell"></div>
+                </div>
+                <div class="borders">
+                    <div class="wrapper">
+                        <div class="border border-vertical-first"></div>
+                        <div class="border border-vertical-second"></div>
+                        <div class="border border-horizontal-first"></div>
+                        <div class="border border-horizontal-second"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="modal modal__winner">
+            <h2 class="modal__header"></h2>
+            <button class="button">Play again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

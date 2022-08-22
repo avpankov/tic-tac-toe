@@ -1,0 +1,143 @@
+body {
+    font-family: 'Merriweather', sans-serif;
+    background-color: rgb(37, 71, 134);
+    color: aliceblue;
+}
+
+h1, .cell {
+    font-family: 'Indie Flower', cursive;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 50px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+
+.field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.cell-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 210px;
+    color: rgb(231, 219, 46);
+    transition: all .5s;
+    cursor: default;
+}
+
+.borders {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.borders .wrapper {
+    position: relative;
+}
+
+.border {
+    position: absolute;
+    background-color: rgb(231, 219, 46);
+    transition: all .5s;
+    border-radius: 8px;
+    transition: all .5s ease;
+}
+
+.border-vertical-first {  
+    left: 295px;
+    width: 15px;
+    height: 0px;
+}
+
+.border-vertical-second {
+    left: 595px;
+    width: 15px;
+    height: 0px;
+}
+
+.border-horizontal-first {
+    top: 295px;
+    height: 15px;
+    width: 0px;
+}
+
+.border-horizontal-second {
+    top: 595px;
+    height: 15px;
+    width: 0px;
+}
+
+.modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    top: calc(50vh - 175px);
+    left: calc(50vw - 175px);
+    border: 15px solid rgb(231, 219, 46);
+    background-color: rgb(37, 71, 134);
+    box-shadow: 0 0 45px black;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all .3s;
+}
+
+.modal__winner {
+    opacity: 0;
+    top: -1000px;
+}
+
+.modal__header {
+    font-size: 50px;
+    margin: 20px 0;
+    font-family: 'Indie Flower', cursive;
+    color: rgb(231, 219, 46);
+}
+
+.button {
+    width: 135px;
+    height: 60px;
+    border: none;
+    margin: 20px 0;
+    border-radius: 20px;
+    background-color: aliceblue;
+    color: rgb(37, 71, 134);
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+.modal__winner .button {
+    width: 175px;
+}
+
+.button:hover {
+    box-shadow: 0 0 8px aliceblue;
+}
