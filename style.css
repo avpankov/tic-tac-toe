@@ -138,3 +138,31 @@ body {
 .button:hover {
     box-shadow: 0 0 8px aliceblue;
 }
+
+.modal__buttons {
+    display: contents;
+    
+}
+
+.results {
+    border: none;
+    margin: 0;
+    background: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: 'Indie Flower', cursive;
+    font-size: 15px;
+}
+
+.modal__results {
+    display: none;
+    box-shadow: none;
+}
+
+.modal__results ol {
+    padding-left: 10px;
+}
+
+.modal__results ol li {
+    font-size: 15px;
+}
