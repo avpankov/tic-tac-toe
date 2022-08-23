@@ -7,6 +7,10 @@ let field = document.querySelector('.field');
 let cells = document.getElementsByClassName('cell');
 let counter = 0;
 let winner = '';
+let winnerStats = 1;
+let start;
+let end;
+let duration;
 
 // field borders
 let verticalFirst = document.querySelector('.border-vertical-first');
@@ -14,9 +18,12 @@ let verticalSecond = document.querySelector('.border-vertical-second');
 let horizontalFirst = document.querySelector('.border-horizontal-first');
 let horizontalSecond = document.querySelector('.border-horizontal-second');
 
-startButton.addEventListener('click', showField);
+startButton.addEventListener('click', () => {
+    start = Date.now();
+    showField();
+});
 
-field.addEventListener('click', (e) => {
+function playGame(e) {
     if (e.target.classList != 'cell') return;
     else if (counter % 2 === 0) {
         e.target.innerText = 'X';
@@ -26,7 +33,7 @@ field.addEventListener('click', (e) => {
         counter++;
     }
     defineWinner();
-});
+}
 
 function defineWinner() {
     let winningСombinations = [
@@ -52,9 +59,13 @@ function defineWinner() {
 }
 
 function showResult(winner) {
+    field.removeEventListener('click', playGame);
     winnerModal.style.opacity = '1';
     winnerModal.style.top = 'calc(50vh - 175px)';
     winnerAnnouncement.innerText = `${winner} win!`;
+    localStorage.setItem(winnerStats, `${winner.toLowerCase()}: ${((Date.now() - start) / 1000).toFixed(1)}s`);
+    winnerStats++;
+    start = 0;
     playAgainButton.addEventListener('click', () => {
         hideField();
         setTimeout(showField, 1000);
@@ -66,25 +77,26 @@ function showField() {
     startModal.style.display = 'none';
     winnerModal.style.top = '-1000px';
 
-    horizontalFirst.style.width = '900px';
-    verticalFirst.style.height = '900px';
-    
+    horizontalFirst.style.width = '600px';
+    verticalFirst.style.height = '600px';
+
     setTimeout(() => {
-        verticalSecond.style.height = '900px';
-        horizontalSecond.style.width = '900px';
+        verticalSecond.style.height = '600px';
+        horizontalSecond.style.width = '600px';
     }, 300);
+
+    field.addEventListener('click', playGame);
 }
 
 function hideField() {
     horizontalFirst.style.width = '0';
     verticalFirst.style.height = '0';
-    
+
     setTimeout(() => {
         verticalSecond.style.height = '0';
         horizontalSecond.style.width = '0';
     }, 300);
 
-        console.log(cells);
     for (let cell of cells) {
         cell.innerText = '';
     }

@@ -4,28 +4,25 @@ body {
     color: aliceblue;
 }
 
-h1, .cell {
+.cell {
     font-family: 'Indie Flower', cursive;
 }
 
 .container {
     max-width: 1440px;
+    height: 98vh;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-header h1 {
-    font-size: 50px;
-    margin: 50px 0;
-    text-align: center;
-}
-
 
 .field {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 900px;
+    width: 600px;
     margin: 0 auto;
     position: relative;
 }
@@ -37,12 +34,12 @@ header h1 {
 }
 
 .cell {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     margin: 0;
     text-align: center;
     vertical-align: middle;
-    font-size: 210px;
+    font-size: 145px;
     color: rgb(231, 219, 46);
     transition: all .5s;
     cursor: default;
@@ -67,25 +64,25 @@ header h1 {
 }
 
 .border-vertical-first {  
-    left: 295px;
+    left: 195px;
     width: 15px;
     height: 0px;
 }
 
 .border-vertical-second {
-    left: 595px;
+    left: 395px;
     width: 15px;
     height: 0px;
 }
 
 .border-horizontal-first {
-    top: 295px;
+    top: 195px;
     height: 15px;
     width: 0px;
 }
 
 .border-horizontal-second {
-    top: 595px;
+    top: 395px;
     height: 15px;
     width: 0px;
 }
